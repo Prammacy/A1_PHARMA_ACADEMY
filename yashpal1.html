@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A1 PHARMA ACADEMY & PARAMEDICAL INSTITUTE</title>
+    
+    <meta name="description" content="A1 Pharma Academy & Paramedical Institute - Premier coaching for D.Pharma, B.Pharma, and DMLT. Expert faculty and modern labs.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #00796b; /* Pharma Teal */
+            --secondary: #1e293b; /* Deep Navy */
+            --accent: #25D366; /* WhatsApp Green */
+            --light: #f1f5f9;
+        }
+
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: #fff; color: var(--secondary); scroll-behavior: smooth; }
+        
+        /* Navigation */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 1rem 8%; background: white; position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary); text-transform: uppercase; }
+        .nav-links a { text-decoration: none; color: var(--secondary); margin-left: 20px; font-weight: 600; cursor: pointer; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Page Management */
+        .page { display: none; padding: 40px 8%; animation: fadeIn 0.5s ease; min-height: 70vh; }
+        .active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Hero Styling */
+        .hero { 
+            text-align: center; padding: 100px 5%; 
+            background: linear-gradient(135deg, #00796b 0%, #004d40 100%); 
+            color: white; border-radius: 0 0 50px 50px; 
+        }
+        .hero h1 { font-size: 2.8rem; margin: 0; line-height: 1.2; }
+        .cta-btn { background: #ff6b6b; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; display: inline-block; margin-top: 25px; font-weight: bold; border: none; cursor: pointer; }
+
+        /* Tables & Lists */
+        .table-box { overflow-x: auto; margin-top: 30px; }
+        table { width: 100%; border-collapse: collapse; background: var(--light); border-radius: 10px; overflow: hidden; }
+        th, td { padding: 18px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: var(--primary); color: white; }
+
+        /* Staff & Class Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
+        .info-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; text-align: center; }
+        .info-card h3 { color: var(--primary); margin-top: 15px; }
+        .icon-circle { width: 70px; height: 70px; background: #e0f2f1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; font-size: 30px; }
+
+        /* Admission Form */
+        .admission-container { max-width: 800px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .form-wrap { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+
+        /* Footer & Mobile Bar */
+        footer { text-align: center; padding: 50px 8% 120px; background: var(--secondary); color: white; margin-top: 50px; }
+        .mobile-bar { position: fixed; bottom: 0; width: 100%; display: flex; z-index: 2000; }
+        .mobile-bar a { flex: 1; padding: 15px; text-align: center; color: white; text-decoration: none; font-weight: bold; }
+        .btn-call { background: #1e293b; }
+        .btn-wa { background: #25D366; }
+
+        @media (max-width: 768px) {
+            .admission-container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo" onclick="showPage('home')">A1 PHARMA</div>
+    <div class="nav-links">
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('courses')">Courses & Fees</a>
+        <a onclick="showPage('staff')">Staff & Class</a>
+        <a onclick="showPage('admission')">Admissions</a>
+    </div>
+</nav>
+
+<div id="home" class="page active">
+    <div class="hero">
+        <h1>A1 PHARMA ACADEMY <br>& PARAMEDICAL INSTITUTE</h1>
+        <p>Leading the way in Pharmacy and Healthcare Education.</p>
+        <button class="cta-btn" onclick="showPage('admission')">ADMISSION INQUIRY 2025</button>
+    </div>
+    
+    <div class="grid">
+        <div class="info-card">
+            <div class="icon-circle">🎓</div>
+            <h3>Expert Coaching</h3>
+            <p>Specialized training for D.Pharma and B.Pharma university exams.</p>
+        </div>
+        <div class="info-card">
+            <div class="icon-circle">🔬</div>
+            <h3>Practical Training</h3>
+            <p>Hands-on experience in modern clinical and chemical laboratories.</p>
+        </div>
+        <div class="info-card">
+            <div class="icon-circle">💼</div>
+            <h3>Career Support</h3>
+            <p>Placement assistance in top pharmacies and hospitals.</p>
+        </div>
+    </div>
+</div>
+
+<div id="courses" class="page">
+    <h2 style="text-align:center; color: var(--primary);">Programs & Fee Structure</h2>
+    <div class="table-box">
+        <table>
+            <thead>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Duration</th>
+                    <th>Eligibility</th>
+                    <th>Admission Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>D. Pharmacy (Coaching)</td>
+                    <td>2 Years</td>
+                    <td>12th (PCB/PCM)</td>
+                    <td style="color: green; font-weight: bold;">OPEN</td>
+                </tr>
+                <tr>
+                    <td>B. Pharmacy (All Semesters)</td>
+                    <td>4 Years</td>
+                    <td>12th Science</td>
+                    <td style="color: green; font-weight: bold;">OPEN</td>
+                </tr>
+                <tr>
+                    <td>DMLT (Lab Technician)</td>
+                    <td>2 Years</td>
+                    <td>10th/12th Pass</td>
+                    <td style="color: green; font-weight: bold;">OPEN</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p style="text-align:center; margin-top: 20px; color: #666;">* Please contact the office for detailed session fee breakups.</p>
+</div>
+
+<div id="staff" class="page">
+    <h2 style="text-align:center; color: var(--primary);">Faculty & Campus Information</h2>
+    
+    <div class="grid">
+        <div class="info-card">
+            <div class="icon-circle">👨‍🏫</div>
+            <h3>Qualified Faculty</h3>
+            <p>Our teachers hold M.Pharm and PhD degrees with years of teaching experience.</p>
+        </div>
+        <div class="info-card">
+            <div class="icon-circle">📖</div>
+            <h3>Smart Classrooms</h3>
+            <p>Digital projectors and AC classrooms for a comfortable learning environment.</p>
+        </div>
+        <div class="info-card">
+            <div class="icon-circle">🧪</div>
+            <h3>Modern Labs</h3>
+            <p>Fully equipped Chemistry and Anatomy labs for practical mastery.</p>
+        </div>
+    </div>
+<style>
+    /* We use actual color codes here so it works even if your old code is different */
+    .a1-staff-box {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 20px;
+        padding: 40px;
+        margin: 20px auto;
+        max-width: 1100px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        font-family: sans-serif; /* Ensures clean text */
+    }
+
+    .a1-heading { 
+        border-left: 6px solid #00796b; /* Solid Teal Color */
+        padding-left: 15px; 
+        margin-bottom: 30px; 
+        color: #00796b; 
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .a1-grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        gap: 20px; 
+    }
+
+    .a1-card { 
+        background: #f8fafc; 
+        padding: 25px; 
+        border-radius: 12px; 
+        text-align: center; 
+        transition: 0.3s;
+        border: 1px solid #edf2f7;
+    }
+
+    .a1-card:hover { 
+        background: #ffffff;
+        transform: translateY(-5px); 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+        border-color: #00796b;
+    }
+
+    .a1-icon { font-size: 50px; margin-bottom: 10px; display: block; }
+    .a1-card h3 { margin: 10px 0 5px; color: #00796b; font-size: 18px; }
+    .a1-card p { margin: 5px 0; font-size: 14px; color: #4a5568; line-height: 1.4; }
+</style>
+
+<div class="a1-staff-box">
+    <div class="a1-heading">A1 Pharma Academic Staff</div>
+    <p style="margin-bottom: 30px; color: #64748b;">Expert faculty dedicated to Paramedical excellence.</p>
+    
+    <div class="a1-grid">
+        <div class="a1-card">
+            <span class="a1-icon">👨‍🔬</span>
+            <h3>Senior Faculty</h3>
+            <p><strong>M.Pharm / PhD</strong></p>
+            <p>Expertise: Pharmacology</p>
+        </div>
+
+        <div class="a1-card">
+            <span class="a1-icon">👩‍🔬</span>
+            <h3>Lab Instructor</h3>
+            <p><strong>B.Pharm / DMLT</strong></p>
+            <p>Expertise: Clinical Testing</p>
+        </div>
+
+        <div class="a1-card">
+            <span class="a1-icon">👨‍🏫</span>
+            <h3>Career Counselor</h3>
+            <p><strong>Placement Cell</strong></p>
+            <p>Expertise: Industry Training</p>
+        </div>
+    </div>
+</div>
+
+    
+
+</div>
+
+<div id="admission" class="page">
+    <div class="admission-container">
+        <div>
+            <h2>Join A1 Pharma Academy</h2>
+            <p>Submit your inquiry and our counselor will guide you through the admission process.</p>
+            <ul style="line-height: 2;">
+                <li>✅ Free Career Counseling</li>
+                <li>✅ Scholarship Guidance</li>
+                <li>✅ Document Verification</li>
+                <li>✅ Direct Admission Support</li>
+            </ul>
+        </div>
+        <div class="form-wrap">
+            <h3 style="margin-top:0; color:var(--primary);">Inquiry Form</h3>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="tel" placeholder="Mobile Number" required>
+                <select required>
+                    <option value="">Choose Course</option>
+                    <option>D. Pharma</option>
+                    <option>B. Pharma</option>
+                    <option>DMLT (Paramedical)</option>
+                </select>
+                <textarea rows="4" placeholder="Your Message / Qualifications"></textarea>
+                <button type="submit" class="cta-btn" style="width:100%;">SEND ENQUIRY</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <h3>A1 PHARMA ACADEMY & PARAMEDICAL INSTITUTE</h3>
+    <p>📍 Office: [Enter Your Street Address Here]</p>
+    <p>📞 Contact: +91 [Your Phone Number] | 📧 Email: info@a1pharma.com</p>
+    <hr style="opacity: 0.2; margin: 20px 0;">
+    <p>&copy; 2025 All Rights Reserved.</p>
+</footer>
+
+<div class="mobile-bar">
+    <a href="tel:+910000000000" class="btn-call">📞 Call Now</a>
+    <a href="https://wa.me/910000000000" class="btn-wa">💬 WhatsApp</a>
+</div>
+
+<script>
+    // Navigation Function
+    function showPage(pageId) {
+        // Hide all pages
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(p => p.classList.remove('active'));
+        
+        // Show selected page
+        document.getElementById(pageId).classList.add('active');
+        
+        // Scroll to top
+        window.scrollTo(0, 0);
+    }
+</script>
+
+</body>
+</html>
